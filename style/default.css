@@ -1,0 +1,28 @@
+html, body {
+    height: 100%;
+}
+
+#main-container {
+    height: 100%;
+    margin: 0 auto;
+    width: 1000px;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 60px 1fr;
+    grid-template-areas: "top-bar" "game-container" "foot-bar";
+}
+
+#game-container {
+    display: grid;
+    box-sizing: border-box;
+    border-top: 2px solid black;
+    grid-template-columns: minmax(200px, 1fr) 5fr 1fr;
+    grid-template-rows: 1fr;
+    grid-template-areas: "left-bar" "play-area" "right-bar"
+}
+
+#play-area {
+    box-sizing: border-box;
+    border-right: 2px solid black;
+    border-left: 2px solid black;
+}
